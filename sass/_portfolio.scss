@@ -1,0 +1,118 @@
+.portfolio {
+    padding: 3rem 5rem;
+
+    background-image:
+    linear-gradient(174deg, #292929 0%, #232327 10%, transparent 375%),
+        url(../public/utils/background-img.png);
+    @include bg-set;
+    height: 93.8vh;
+    @media only screen and (max-width: 51.125em) {
+        padding: 2rem 1rem !important;
+    }
+    
+
+    // overflow-y: hidden;
+    // transition: all .3s cubic-bezier(0.38, 0.01, 0.15, 0.99);
+    // backface-visibility: hidden;
+    // -webkit-backface-visibility: hidden;
+
+    @include scroll-bar;
+    
+    
+    &-row {
+        // display: flex;
+        // justify-content: space-evenly;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        grid-column-gap: 4rem;
+        align-items: start;
+        grid-row-gap: 2rem;
+        // padding: 2rem;
+
+        padding: 3rem 12rem !important;
+
+        @media only screen and (max-width: 69.375em) {
+            padding: 3rem !important;
+        }
+        @media only screen and (max-width: 56.875em) {
+            grid-column-gap: 3rem;
+            padding: 1rem important;
+           }
+
+    }
+    &-card {
+       position: relative;
+}
+    &-shape {
+        background-color: rgba(24, 24, 24, 0.651);
+        padding: 3rem;
+        border-radius: 5px;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0.8rem 1.3rem 2.5rem 0 rgb(66 62 62 / 75%), 0.2rem -0.7rem 0.7rem 0 rgb(65 57 57 / 95%);
+        &>div:not(:last-child) {
+            background-image: 
+                linear-gradient(4deg, rgb(12 12 12 / 90%), rgb(213 218 228 / 80%) 50%, rgb(255 255 255 / 80%) 66%);
+        }
+        
+    }
+    &-image {
+        height: 40rem !important;
+        width: 40rem !important;
+        transform: scale(1);
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        box-shadow: -0.4rem 0.3rem 1.6rem 0 rgba(0, 0, 0, 0.801),    -.8rem -1.2rem 1.2rem 0 rgba(41, 7, 7, 0.952);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transition: all .3s;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        -ms-transition: all .3s;
+        -o-transition: all .3s;
+}
+    
+    &-figcaption {
+        position: absolute;
+        top: 80%;
+        left: 80%;
+        transform: translate(-50%, 20%);
+        text-align: center;
+        opacity: 0;
+        transition: all .5s;
+
+        backface-visibility: hidden;
+    }
+    &-shape:hover  &-figcaption {
+        opacity: 1;
+        transform: translate(-50%, -100%);
+        -webkit-transform: translate(-50%, -100%);
+        -moz-transform: translate(-50%, -100%);
+        -ms-transform: translate(-50%, -100%);
+        -o-transform: translate(-50%, -100%);
+    }
+    &-shape:hover &-image {
+        opacity: .8;
+        transform: scale(1.15);
+        -webkit-filter: blur(1px) brightness(85%);
+        filter: blur(1px) brightness(85%);
+    }
+
+    &-icon {
+        height: 3rem !important;
+        width: 3rem !important;
+        fill: var(--color-grey-light-1) !important;
+    }
+    &-caption {
+        &>span {
+            font-size: 2rem;
+            color: var(--color-grey-light-2);
+        }
+    }
+}

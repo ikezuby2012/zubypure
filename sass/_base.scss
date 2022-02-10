@@ -1,0 +1,75 @@
+:root {
+    --color-grey-light-1: #f9f7f6;
+    --color-grey-light-2: #aaa;
+  
+    --color-grey-dark-1: #54483a;
+    --color-grey-dark-2: #6d5d4b;
+    --color-dark: #1f1f1f;
+    --color-secondary-light: #fff;
+
+    --grey-light-1: #faf9f9;
+    --grey-light-2: #f4f2f2;
+    --grey-light-3: #f0eeee;
+    --grey-light-4: #ccc;
+
+    --color-dark-2: #242121;
+
+    --scrollbarBG: #CFD8DC;
+    --thumbBG: #3145a0;
+
+  }
+  
+  //SASS VARIABLE
+  $font-variable: 1.4rem;
+  $font-primary: 'nunito', sans-serif;
+  $font-display: 'josefin sans', Sans-serif;
+  $font-weight: 400;
+  
+  //RESPONSIVE VARIABLE
+  $bp-largest: 75em; // 1200/16 Tab-layout
+$bp-larger: 58.75em; // 940 
+$bp-large: 56.25em; //900
+$bp-medium: 51.875em; //830
+$bp-medium-1: 49.0625em; //785
+$bp-medium-2: 46.25em; //740
+$bp-medium-3: 39.375em;//630
+$bp-small: 35.625em;//570
+$bp-small-res: 30.625em; //490
+$bp-small-x: 26.5em;//424
+$bp-small-x1: 25.625em;//410
+$bp-small-2: 22.25em;//356
+  *,
+  *::after,
+  *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+  }
+  
+  html {
+    font-size: 62.5%; //1rem
+    box-sizing: border-box;
+    @media only screen and (max-width: $bp-largest) {font-size: 55%;}
+  }
+  
+  body {
+    font-family: $font-primary;
+    color: var(--color-grey-dark-1);
+    font-weight: 300;
+    line-height: 1.6;
+    background-color: var(--color-grey-light-1);
+  }
+  
+  .container {
+    background-color: var(--color-grey-light-2);
+    margin: .3rem;
+    @media only screen and (max-width: $bp-largest) {margin:0;}
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  }
+  
+  ::selection {
+    background-color: transparent;
+  }
