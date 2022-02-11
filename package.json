@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "proxy": true,
+  "proxy": "https://zubypure.herokuapp.com",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
